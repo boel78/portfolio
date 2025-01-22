@@ -8,26 +8,37 @@
 </head>
 <body>
     <nav>
-        <a>Hem</a>
-        <a href="#about_me">Om Mig</a>
-        <a href="#technologies">Språk och erfarenheter</a>
-        <a href="#projects">Projekt</a>
+        <h1>Noel Fockstedt</h1>
+        <ul class="nav-links">
+            <li class="home_nav"><a href="#" >Hem</a></li>
+            <li class="about_me_nav"><a href="#about_me">Om Mig</a></li>
+            <li class="technologies_nav"><a href="#technologies">Språk och erfarenheter</a></li>
+            <li class="projects_nav"><a href="#projects">Projekt</a></li>
+            <li class="contact_nav"><a href="#contact">Kontakt</a></li>
+            <img src="svgs/sun-svgrepo-com.svg" id="themeSwitch" alt="Sun">
+        </ul>
     </nav>
-    <div class="header">
-        <div class="header-text">
-            <h1>Hej, jag heter Noel Fockstedt</h1>
-            <p>biotextblablablablabalbalbalbalal</p>
+    <section class="header" id="home">
+        <div class="header-container">
+            <div class="header-text">
+                <h1>Hej, jag heter Noel Fockstedt</h1>
+                <p>Jag är en passionerad programmerare med ett öga för detaljer och en drivkraft att lösa problem. Med erfarenhet inom både frontend och backend älskar jag att skapa effektiva, användarvänliga lösningar som gör skillnad.</p>
+                <button>CV</button>
+            </div>
+            <img src="images/26983.jpg">
         </div>
-        <img src="images/26983.jpg">
-    </div>
+    </section>
 
-    <div class="about_me" id="about_me">
-        <h3>Om mig</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, dolorem ab ut animi temporibus fuga fugiat unde repellendus, perspiciatis consectetur sint accusantium reprehenderit magni eos hic, quasi non harum voluptates!¨</p>
-    </div>
-    <div class="technologies" id="technologies">
-        <h3>Språk och erfarenheter</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ab quas illo autem provident minus incidunt consectetur nihil, iure sed vero impedit eos enim harum deserunt. Officia eos quae officiis!</p>
+<section class="second-section" id="about_me">
+        <div class="about_me">
+            <h3 id="text-highlight">Om mig</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, dolorem ab ut animi temporibus fuga fugiat unde repellendus, perspiciatis consectetur sint accusantium reprehenderit magni eos hic, quasi non harum voluptates!¨</p>
+        </div>
+        <section class="technologies" id="technologies">
+            <h3 id="text-highlight">Språk och erfarenheter</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ab quas illo autem provident minus incidunt consectetur nihil, iure sed vero impedit eos enim harum deserunt. Officia eos quae officiis!</p>
+            </section>
+</section>
         <div class="technology-container">
             <div class="technology">
                 <img src="svgs/dotnet.svg" alt="Dotnet">
@@ -54,9 +65,8 @@
                 <h4>JavaScript</h4>
             </div>
         </div>
-    </div>
-    <div>
-        <h2 class="projectText" id="projects">Projekt</h2>
+    <section class="project-section" id="projects">
+        <h2 class="projectText" id="projectText">Projekt</h2>
         <div class="projects">
     
     
@@ -102,13 +112,13 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-        <h2 class="projectText">Skolprojekt</h2>
-        <div class="projects">
+    </section>
+    <section class="school-project-section" id="projects">
+        <h2 class="projectText" id="text-highlight">Skolprojekt</h2>
+        <div class="school-projects">
             <div class="project">
                 <h3>Cv-site</h3>
-                <p>projecttextblablablabla</p>
+                <p>En cv-site vi gjorde i .net Aspnetcore, där vi har byggt ett system utifrån en MVC arkitektur. Samt en databas med hjälp av MySQL-Server</p>
                 <div class="tech-stack">
                     <img src="svgs/dotnet.svg" alt="Dotnet">
                     <img src="svgs/mysql-icon.svg" alt="MySQL">
@@ -116,7 +126,7 @@
             </div>
             <div class="project">
                 <h3>Hattmakaren</h3>
-                <p>projecttextblablablabla</p>
+                <p>Ett affärssystem för en hattmakare vilket vi gjorde i Java med hjälp av JForms och MySQL. Fokuset i detta projekt var att arbeta inom Scrum och använda infon från produktägare till projektet.</p>
                 <div class="tech-stack">
                     <img src="svgs/java.svg" alt="Java">
                     <img src="svgs/mysql-icon.svg" alt="MySQL"> 
@@ -124,7 +134,7 @@
             </div>
             <div class="project">
                 <h3>Men in Black</h3>
-                <p>projecttextblablablabla</p>
+                <p>Ett affärssystem för Men In Black. Detta system byggde vi utifrån vilka krav som lärarna hade framkallat. Vi byggde också här en databas med MySQL</p>
                 <div class="tech-stack">
                     <img src="svgs/java.svg" alt="Java">
                     <img src="svgs/mysql-icon.svg" alt="MySQL"> 
@@ -132,17 +142,23 @@
             </div>
     
         </div>
-    </div>
+    </section>
 
-    <div class="contactForm">
+    <section class="contactForm" id="contact">
+        <h2>Kontakt</h2>
         <form>
-            <h3>Kontakta mig</h3>
+            <h3 id="text-highlight">Kontakta mig</h3>
+            <p>Om du vill veta mer blablablabla</p>
             <input type="text" placeholder="Namn">
             <input type="email" placeholder="Email">
             <textarea placeholder="Meddelande"></textarea>
             <button>Skicka</button>
         </form>
-    </div>
+        <div class="contact-information">
+            <h4>Email</h4>
+            <p id="text-highlight">noel.fockstedt@live.se</p>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
