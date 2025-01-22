@@ -7,14 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bio">
-        <div class="bio-text">
+    <nav>
+        <a>Hem</a>
+        <a href="#about_me">Om Mig</a>
+    </nav>
+    <div class="header">
+        <div class="header-text">
             <h3>Noel Fockstedt</h3>
             <p>biotextblablablabla</p>
         </div>
         <img>
     </div>
-    <h2 class="projectText">Projects</h2>
+
+    <div class="about_me" id="about_me">
+        <h3>Om mig</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, dolorem ab ut animi temporibus fuga fugiat unde repellendus, perspiciatis consectetur sint accusantium reprehenderit magni eos hic, quasi non harum voluptates!¨</p>
+    </div>
+    <div class="technologies">
+        <h3>Teknologier</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ab quas illo autem provident minus incidunt consectetur nihil, iure sed vero impedit eos enim harum deserunt. Officia eos quae officiis!</p>
+        <div>
+            <div>teknologi1</div>
+        </div>
+    </div>
+    <h2 class="projectText">Projekt</h2>
     <div class="projects">
 
 
@@ -33,7 +49,11 @@
         </div>
         <div class="project">
             <h3>ChatMore</h3>
-            <p>projecttextblablablabla</p>
+            <p>Framförallt är det en chat-applikation. Men man ska också kunna lägga upp posts som i andra sociala medier som Facebook eller Instagram</p>
+            <div class="links">
+                <a href="https://github.com/boel78/elevate-elegance"><img src="svgs/github-icon.svg"></a>
+                <a href="https://elevate-elegance-frontend.onrender.com/">Website link</a>
+            </div>
             <div class="tech-stack">
                 <img src="svgs/nextjs-icon.svg" alt="NextJS">
                 <img src="svgs/dotnet.svg" alt="Dotnet">
@@ -43,7 +63,11 @@
         </div>
         <div class="project">
             <h3>PomodoroApp</h3>
-            <p>projecttextblablablabla</p>
+            <p>En applikation som gör det lättare att plugga med hjälp av Pomodorotekniken. Denna app tar inspiration från Duolingo med funktionalitet som Streaks och Achievements för att motivera studerande.</p>
+            <div class="links">
+                <a href="https://github.com/boel78/elevate-elegance"><img src="svgs/github-icon.svg"></a>
+                <a href="https://elevate-elegance-frontend.onrender.com/">Website link</a>
+            </div>
             <div class="tech-stack">
                 <img src="svgs/nextjs-icon.svg" alt="NextJS">
                 <img src="svgs/dotnet.svg" alt="Dotnet">
@@ -52,7 +76,7 @@
             </div>
         </div>
     </div>
-    <h2 class="projectText">School Projects</h2>
+    <h2 class="projectText">Skolprojekt</h2>
     <div class="projects">
         <div class="project">
             <h3>Cv-site</h3>
@@ -79,6 +103,16 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="contactForm">
+        <form>
+            <h3>Kontakta mig</h3>
+            <input type="text" placeholder="Namn">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Meddelande"></textarea>
+            <button>Skicka</button>
+        </form>
     </div>
     
 </body>

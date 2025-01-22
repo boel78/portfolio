@@ -1,4 +1,25 @@
-.bio{
+*, body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 20rem;
+    gap: 20rem;
+}
+nav{
+    position: fixed;
+    background-color: yellow;
+    border-bottom: rgb(104, 104, 104) 1px solid;
+    box-shadow: 1px 1px 3px rgb(104, 104, 104);
+    width: 100%;
+    padding-block: 1rem;
+}
+.header{
+    padding-top: 4rem;
     display: flex;
 }
 .projects{
@@ -10,6 +31,10 @@
 .project{
     border: 1px solid black;
     padding: 1rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .projectText{
     text-align: center;
