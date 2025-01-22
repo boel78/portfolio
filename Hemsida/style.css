@@ -18,6 +18,8 @@ body{
     --accent-color: #ff7834;
     --shadow-color: rgb(167, 167, 167);
     --nav-border: rgb(186, 186, 186);
+    --card-color: rgb(246, 246, 246);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
 }
 body.dark{
@@ -26,6 +28,7 @@ body.dark{
     --accent-color: #ff7834;
     --shadow-color: rgb(0, 0, 0);
     --nav-border: rgb(14, 14, 14);
+    --card-color: #773400;
     color:#fffff7
 }
 nav{
@@ -47,20 +50,62 @@ nav img{
     cursor: pointer;
 }
 .nav-links{
-    display: flex;
-    gap: 1rem;
-    list-style: none;
     align-items: center;
     padding-right: 2rem;
 }
 nav h1{
     padding-left: 2rem;
 }
-.active{
-    background-color: var(--accent-color);
-    padding: 0.5rem;
-    border-radius: 4px;
+
+nav ul{
+    --_gap: 1.1rem;
+    gap: var(--_gap);
+    display: flex;
+    list-style: none;
 }
+
+nav li{
+    padding-inline: calc(var(--_gap)/2);
+    position: relative;
+    overflow: hidden;
+    padding: 6px;
+}
+
+nav li::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--accent-color);
+    box-shadow: 3px 3px 10px var(--shadow-color);
+    z-index: -1;
+    border-radius: 4px;
+    scale: 0 1;
+
+    translate: var(--_translate, 0);
+    scale: var(--_width, 0) 1;
+    transition: 
+        scale 300ms var(--_scale-delay, 0ms),
+        translate 500ms var(--_translate-delay, 0ms);
+}
+
+.active{
+    --_width: 1;
+}
+.active::after + li{
+    --_translate: -100%;
+    --_scale-delay: 300ms;
+    --_translate-delay: 200ms;
+}
+
+nav li:has(+.active){
+    --_translate: 100%;
+    --_scale-delay: 300ms;
+    --_translate-delay: 200ms;
+}
+
 a{
     text-decoration: none;
     color: inherit;
@@ -136,16 +181,17 @@ button:hover{
     padding-bottom: 5rem;
 }
 .project{
-    border: 1px solid var(--shadow-color);
-    background-color: var(--background-color);
-    border-radius: 4px;
-    box-shadow: 1px 1px 4px var(--shadow-color);
     padding: 1rem;
+    border: 1px solid var(--shadow-color);
+    background-color: var(--card-color);
+    border-radius: 4px;
+    font-size: large;
+    box-shadow: 1px 1px 4px var(--shadow-color);
     width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     
 }
 .projectText{
@@ -153,6 +199,16 @@ button:hover{
     margin-bottom: 5rem;
     margin-top: 5rem;
     font-size: 3rem;
+}
+.links{
+    padding-top: 0.2rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-self: start;
+}
+.link-container{
+    width: 100%;
 }
 .school-projects-section{
     width: 100vw;
@@ -163,9 +219,12 @@ button:hover{
     gap: 4rem;
 }
 .tech-stack{
+    border-top: 1px solid var(--shadow-color);
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    width: 100%;
 }
 .tech-stack img{
     width: 3rem;
@@ -193,7 +252,7 @@ button:hover{
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: rgb(246, 246, 246);
+    background-color: var(--card-color);
     border-radius: 3px;
     opacity: 0;
     animation: fadeIn 1s;
