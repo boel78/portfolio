@@ -12,10 +12,11 @@ body{
     flex-direction: column;
     align-items: center;
     padding-inline: 8rem;
-    font-size: x-large;
+    font-size: large;
     --background-color: #fffff7;
     --section-color: #ececec;
     --accent-color: #ff7834;
+    --c2: #69d2e7;
     --shadow-color: rgb(167, 167, 167);
     --nav-border: rgb(186, 186, 186);
     --card-color: rgb(246, 246, 246);
@@ -26,6 +27,7 @@ body.dark{
     --background-color: rgb(40, 18, 4);
     --section-color: #100901;
     --accent-color: #ff7834;
+    --c2: #e16d1a;
     --shadow-color: rgb(0, 0, 0);
     --nav-border: rgb(14, 14, 14);
     --card-color: #773400;
@@ -118,7 +120,6 @@ a{
     gap:2rem;
         --s: 52px; 
         --c1: #e0e4cc;
-        --c2: #69d2e7;
         
         --_g: 90deg,#0000 0; 
         background:
@@ -127,6 +128,7 @@ a{
           conic-gradient(from 135deg at 50% 0,var(--c1) var(--_g)) var(--c2); 
         background-size: calc(2*var(--s)) var(--s);
         background-attachment: fixed;
+        transition: --c2 1s ease-in-out;
     width: 100vw; 
     height: 100vh;
 }
@@ -310,6 +312,7 @@ form input,textarea{
 }
 #text-highlight, #projectText{
     color: var(--accent-color);
+    font-size: xx-large;
 }
 @keyframes fadeIn{
     from{
