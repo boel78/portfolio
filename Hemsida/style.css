@@ -217,7 +217,8 @@ button:hover{
 .projects{
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    flex-wrap: wrap;
+    gap: 3rem;
     padding-inline: 8rem;
 }
 .project-section{
@@ -233,7 +234,7 @@ button:hover{
     border-radius: 4px;
     font-size: large;
     box-shadow: 1px 1px 4px var(--shadow-color);
-    width: 30%;
+    width: 28%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -286,7 +287,7 @@ button:hover{
     
     left: 0;
     width: 100%;
-    height: 90px;
+    height: 5rem;
     background: var(--background-color);
     border-left: 2px solid var(--text-color);
     animation: typing 3s steps(10) infinite,
@@ -298,6 +299,7 @@ button:hover{
 }
 .school-projects{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 4rem;
 }
@@ -306,12 +308,16 @@ button:hover{
     padding-top: 1rem;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    width: 100%;
+    gap: clamp(0.5rem, 1vw, 2rem);
+    max-width: 100%;
+    background-color: #b8b8b853;
+    border-radius: 3px;
+    padding: 1rem;
 }
 .tech-stack img{
-    width: 3rem;
-    height: 3rem;
+    width: clamp(10px, 3vw, 3rem); /* Minst 30px, max 80px, och skalar med viewport */
+    height: clamp(10px 3vw, 3rem);
+    max-height: 3rem;
 }
 .links{
     display: flex;
