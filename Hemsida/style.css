@@ -20,6 +20,8 @@ body{
     --shadow-color: rgb(167, 167, 167);
     --nav-border: rgb(186, 186, 186);
     --card-color: rgb(246, 246, 246);
+    --text-color: #120909;
+    --text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
 }
@@ -27,10 +29,12 @@ body.dark{
     --background-color: rgb(40, 18, 4);
     --section-color: #100901;
     --accent-color: #ff7834;
+    --text-shadow: -1px -1px 0 #120909, 1px -1px 0 #120909, -1px 1px 0 #120909, 1px 1px 0 #120909;
     --c2: #e16d1a;
     --shadow-color: rgb(0, 0, 0);
     --nav-border: rgb(14, 14, 14);
     --card-color: #773400;
+    --text-color: #fffff7;
     color:#fffff7
 }
 nav{
@@ -117,6 +121,7 @@ a{
     padding-top: 3rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap:2rem;
         --s: 52px; 
         --c1: #e0e4cc;
@@ -135,14 +140,53 @@ a{
 .header-container{
     padding-inline: 8rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
-    padding-bottom: 5rem;
+    height: 100vh;
 }
 .header-text{
+    text-shadow: var(--text-shadow);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-self: center;
     gap: 2rem;
+    width: 50%;
+    padding-top: 5rem;
+    position: relative;
+}
+.header-container svg{
+    place-self: center;
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    bottom: 3rem;
+    animation: slideIn 1.5s ease-in-out forwards;
+}
+.header-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 2rem;
+    height: 100vh;
+    margin-top: auto;
+}
+.header-links a img{
+    width: 3rem;
+    height: 3rem;
+    opacity: 0;
+    background-color: white;
+    border-radius: 50%;
+    animation: slideIn 1.5s ease-in-out forwards;
+    
+}
+.linjen{
+    width:2px;
+    background-color: var(--accent-color);
+    height: 100%;
 }
 
 button{
@@ -321,6 +365,26 @@ form input,textarea{
     to{
         opacity: 1;
     }
+}
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(-700px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.header-links a:nth-child(1) img {
+    animation-delay: 0.6s; 
+}
+.header-links a:nth-child(2) img {
+    animation-delay: 0.4s; 
+}
+.header-links a:nth-child(3) img {
+    animation-delay: 0.2s; 
 }
 
 
