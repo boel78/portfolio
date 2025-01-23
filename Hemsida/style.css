@@ -156,14 +156,6 @@ a{
     padding-top: 5rem;
     position: relative;
 }
-.header-text h1{
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 1px solid var(--text-color);
-    animation: typing 3.2s steps(15, end),
-    blinking 1s steps(1, end) infinite;
-
-}
 .header-container svg{
     place-self: center;
     position: absolute;
@@ -264,6 +256,40 @@ button:hover{
 .link-container{
     width: 100%;
 }
+.about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 4rem;
+    padding-inline: 2rem;
+}
+.technologies-list{
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.technologies-list li{
+    list-style: none;
+    font-size: 60px;
+    position: relative;
+    top: 0;
+    animation: slide 9s steps(3) infinite;
+}
+.technologies-list li span{
+    position: relative;
+    line-height: 90px;
+}
+.technologies-list li span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: var(--background-color);
+    border-left: 2px solid var(--text-color);
+    animation: typing 3s steps(10) infinite;
+}
+
 .school-projects-section{
     width: 100vw;
 }
@@ -383,11 +409,19 @@ form input,textarea{
     }
 }
 @keyframes typing{
-    from{
-        width: 0;
+    40%, 60%{
+        left: calc(100% + 30px);
     }
-    to{
-        width: 40%;
+    100%{
+        left: 0;   
+    }
+}
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -270px;
     }
 }
 
