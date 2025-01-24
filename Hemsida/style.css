@@ -42,7 +42,7 @@ nav{
     background-color: var(--background-color);
     border-bottom: var(--nav-border) 1px solid;
     box-shadow: 1px 1px 4px var(--shadow-color);
-    width: 100%;
+    width: 100vw;
     padding-block: 1rem;
     z-index: 1;
     display: flex;
@@ -59,7 +59,7 @@ nav img{
     align-items: center;
     padding-right: 2rem;
 }
-nav h1{
+nav h2{
     padding-left: 2rem;
 }
 
@@ -156,6 +156,23 @@ a{
     padding-top: 5rem;
     position: relative;
 }
+.header-text h1{
+    padding-bottom: 1rem;
+    border-bottom: 4px solid transparent;
+}
+.header-text h1::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: black;
+    transform: translateY(-50%);
+    animation: grow-border 2.2s ease-out forwards;
+}
+
+
 .header-container svg{
     place-self: center;
     position: absolute;
@@ -272,6 +289,7 @@ button:hover{
 .technologies-list li{
     list-style: none;
     font-size: 3rem;
+    font-weight: bold;
     position: relative;
     top: 0;
     animation: slide 9s steps(3) infinite;
@@ -368,8 +386,12 @@ button:hover{
     grid-template-columns: repeat(2, 1fr);
 
 }
+.contactForm #text-highlight{
+   font-size: 2rem;
+}
 .contactForm h2{
     text-align: center;
+    font-size: 3rem;
     grid-column: 1/3;
 }
 .contact-information{
@@ -399,8 +421,9 @@ form input,textarea{
 }
 #text-highlight, #projectText{
     color: var(--accent-color);
-    font-size: xx-large;
+    font-size: 3rem;
 }
+
 @keyframes fadeIn{
     from{
         opacity: 0;
@@ -444,6 +467,16 @@ form input,textarea{
         transform: translateY(0);
     }
 }
+@keyframes grow-border {
+    0% {
+        width: 0;
+        left: 50%; /* Börja från mitten */
+    }
+    100% {
+        width: 100%;
+        left: 0; /* Väx från mitten till hela bredden */
+    }
+}
 .header-links a:nth-child(1) img {
     animation-delay: 0.6s; 
 }
@@ -454,4 +487,77 @@ form input,textarea{
     animation-delay: 0.2s; 
 }
 
+@media (max-width: 860px) {
+    body {
+        padding-inline: 2rem; /* Minska padding */
+        font-size: medium; /* Minska textstorlek */
+    }
+    
+    nav {
+        flex-direction: column; /* Låt nav bli vertikalt */
+        padding-block: 0.5rem;
+    }
 
+    nav img {
+        width: 1.5rem; /* Minska storleken på ikonerna */
+        height: 1.5rem;
+    }
+    .header{
+        height: 60vh;
+        overflow: hidden;
+    }
+
+    .header-container {
+        padding-inline: 2rem; /* Minska padding */
+        padding-top: 40rem;
+    }
+    .header-container svg{
+        top: 8rem;
+    }
+
+    .header-text {
+        width: 50%; /* Gör texten full bredd */
+        padding-top: 3rem; /* Justera padding */
+    }
+
+    .header img {
+        width: 20rem; /* Justera storlek på header-bild */
+        height: auto;
+    }
+
+    .projects {
+        padding-inline: 2rem; /* Justera padding */
+        gap: 1rem; /* Minska gapet */
+    }
+
+    .project {
+        width: 100%; /* Gör projekten full bredd */
+    }
+
+    .contactForm {
+        grid-template-columns: 1fr; /* Gör formuläret en kolumn */
+    }
+
+    .contact-information,
+    form {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .tech-stack {
+        display: flex; 
+        gap:4rem;
+    }
+
+    .header-links {
+        gap: 0.5rem; /* Minska gapet mellan ikoner */
+    }
+
+    .header-links a img {
+        width: 2rem; /* Minska storleken på ikoner */
+        height: 2rem;
+    }
+    .header-text h1::before{
+        top: 40%;
+    }
+}
