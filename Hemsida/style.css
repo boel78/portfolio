@@ -577,10 +577,10 @@ form input,textarea{
         padding: 0;
         right: 0;
         left: 0;
-        width: 100vw;
+        gap: 0.2rem;
     }
     nav h2{
-        padding: 1rem;
+        padding-top: 1rem;
     }
     .nav-links li a{
         width: 1rem;
