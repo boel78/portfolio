@@ -315,9 +315,8 @@ button:hover{
     padding: 1rem;
 }
 .tech-stack img{
-    width: clamp(10px, 3vw, 3rem); /* Minst 30px, max 80px, och skalar med viewport */
-    height: clamp(10px 3vw, 3rem);
-    max-height: 3rem;
+    width: clamp(30px, 3vw, 3rem); /* Minst 30px, max 80px, och skalar med viewport */
+    height: clamp(30px, 3vw, 3rem);
 }
 .links{
     display: flex;
@@ -361,7 +360,6 @@ button:hover{
 .contactForm{
     margin-top: 10rem;
     padding-top: 5rem;
-    width: 100vw;
     height: 80vh;
     background-color: var(--section-color);
     display: grid;
@@ -568,7 +566,6 @@ form input,textarea{
 @media (max-width: 480px) {
     body {
         font-size: x-small;
-        width: 100vw;
         padding:0;
     }
     .nav-links{
@@ -580,6 +577,7 @@ form input,textarea{
         padding: 0;
         right: 0;
         left: 0;
+        width: 100vw;
     }
     nav h2{
         padding: 1rem;
@@ -594,12 +592,15 @@ form input,textarea{
     }
     
     .header{
-        height: 90vh;
+        height: 70vh;
         overflow: hidden;
     }
     .header-container{
         padding-inline: 0;
-        padding-top: 60vh;
+        padding-top: 30vh;
+    }
+    .header-container svg{
+        top: 15rem;
     }
     .header-links a img {
         width: 2rem; /* Minska storleken på ikoner */
@@ -611,10 +612,16 @@ form input,textarea{
     .header-text h1::before{
         top: 50%;
     }
+    .second-section{
+        padding-inline: 1rem;
+    }
 
     .technology-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+    .about-me{
+        padding-inline: 0;
     }
     .technologies{
         width: 80vw;
@@ -623,10 +630,7 @@ form input,textarea{
         width: 2rem;
         height: 2rem;
     }
-    .about-me {
-        width: 100vw;
-        padding: 0;
-    }
+
     .about-me p{
         width: 90%;
     }
@@ -638,21 +642,19 @@ form input,textarea{
     .projects {
         align-items: space-between;
         gap: 3rem; 
-        width: 100%;
-        padding: 0;
+        padding-inline: 1rem;
     }
 
     .project {
         width: 100%; /* Full bredd på projekten */
         padding: 0.5rem; /* Minska padding */
     }
+    .school-projects{
+        padding-inline: 1rem;
+    }
 
     .header img {
         width: 15rem; /* Justera header-bildens storlek */
-    }
-
-    .header-container {
-        height: auto; /* Justera höjden på header-container */
     }
     #text-highlight{
         font-size: 1.5rem;
@@ -666,13 +668,15 @@ form input,textarea{
         padding: 0;
     }
     form input,textarea{
-        width: 10rem;
+        width: 8rem;
         padding: 0.5rem;
     }
     .contactForm{
-        width: 100vw;
+        padding-inline: 1rem;
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    }
+    .contact-information{
+        padding: 0;
     }
     .contactForm h2{
         grid-column: 1;
@@ -683,7 +687,7 @@ form input,textarea{
         font-size: 2rem;
     }
     .contactForm #text-highlight{
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
     .technologies-list li{
         font-size: 2rem;
