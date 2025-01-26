@@ -595,7 +595,7 @@ form input,textarea{
     }
     
     .header{
-        height: 50vh;
+        height: 60vh;
         overflow: hidden;
     }
     .header-container{
@@ -605,7 +605,7 @@ form input,textarea{
     .header-container svg{
         width: 4rem;
         height: 4rem;
-        top: 3vh;
+        top: 14vh;
     }
     .header-links{
         margin-left: 1rem;
