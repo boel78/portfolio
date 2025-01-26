@@ -602,7 +602,7 @@ form input,textarea{
     .header-container svg{
         width: 4rem;
         height: 4rem;
-        top: 1vh;
+        top: 3vh;
     }
     .header-links a img {
         margin-left: 1rem;
