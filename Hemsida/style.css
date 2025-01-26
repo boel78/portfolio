@@ -612,8 +612,12 @@ form input,textarea{
         top: 50%;
     }
 
+    .technology-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
     .technologies{
-        width: 80%;
+        width: 80vw;
     }
     .technology img{
         width: 2rem;
@@ -625,9 +629,6 @@ form input,textarea{
     }
     .about-me p{
         width: 90%;
-    }
-    .technologies{
-        width: 100vw;
     }
 
     .header-text h1 {
