@@ -583,6 +583,7 @@ form input,textarea{
     }
     nav h2{
         padding-top: 1rem;
+        padding-left: 0;
     }
     .nav-links li a{
         width: 1rem;
