@@ -604,11 +604,14 @@ form input,textarea{
         height: 4rem;
         top: 3vh;
     }
-    .header-links a img {
+    .header-links{
         margin-left: 1rem;
+    }
+    .header-links a img {
         width: 2rem; 
         height: 2rem;
     }
+
     .header-text{
         gap: 1rem;
     }
