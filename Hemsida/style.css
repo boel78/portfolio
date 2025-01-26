@@ -594,12 +594,12 @@ form input,textarea{
     }
     
     .header{
-        height: 60vh;
+        height: 90vh;
         overflow: hidden;
     }
     .header-container{
         padding-inline: 0;
-        padding-top: 43rem;
+        padding-top: 60vh;
     }
     .header-links a img {
         width: 2rem; /* Minska storleken på ikoner */
