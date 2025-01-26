@@ -360,7 +360,9 @@ button:hover{
 .contactForm{
     margin-top: 10rem;
     padding-top: 5rem;
-    height: 80vh;
+    height: 90vh;
+    width: 100vw;
+    box-sizing: border-box;
     background-color: var(--section-color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -678,6 +680,8 @@ form input,textarea{
         padding: 0.5rem;
     }
     .contactForm{
+        height: 60vh;
+        padding-top: 2rem;
         padding-inline: 1rem;
         grid-template-columns: repeat(2, 1fr);
     }
