@@ -485,16 +485,17 @@ form input,textarea{
         height: 1.5rem;
     }
     .header{
-        height: 60vh;
+        height: 80vh;
         overflow: hidden;
+
     }
 
     .header-container {
         padding-inline: 2rem; /* Minska padding */
-        padding-top: 40rem;
+        padding-top: 10rem;
     }
     .header-container svg{
-        top: 8rem;
+        top: 25rem;
     }
 
     .header-text {
@@ -575,7 +576,7 @@ form input,textarea{
         padding: 0;
     }
     nav {
-        justify-content: flex-start;
+        flex-direction: column;
         padding: 0;
         right: 0;
         left: 0;
@@ -586,6 +587,10 @@ form input,textarea{
     .nav-links li a{
         width: 1rem;
         white-space: nowrap;
+    }
+    .nav-links img{
+        width: 1rem;
+        height: 1rem;
     }
     
     .header{
@@ -677,7 +682,7 @@ form input,textarea{
         font-size: 2rem;
     }
     .contactForm #text-highlight{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .technologies-list li{
         font-size: 2rem;
