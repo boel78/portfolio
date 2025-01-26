@@ -592,22 +592,29 @@ form input,textarea{
     }
     
     .header{
-        height: 70vh;
+        height: 50vh;
         overflow: hidden;
     }
     .header-container{
         padding-inline: 0;
-        padding-top: 30vh;
+        padding-top: 40vh;
     }
     .header-container svg{
-        top: 15rem;
+        width: 4rem;
+        height: 4rem;
+        top: 0;
     }
     .header-links a img {
-        width: 2rem; /* Minska storleken på ikoner */
+        margin-left: 1rem;
+        width: 2rem; 
         height: 2rem;
+    }
+    .header-text{
+        gap: 1rem;
     }
     .header-text h1{
         white-space: nowrap;
+        font-size: 1.3rem;
     }
     .header-text h1::before{
         top: 50%;
@@ -633,10 +640,6 @@ form input,textarea{
 
     .about-me p{
         width: 90%;
-    }
-
-    .header-text h1 {
-        font-size: 2rem; /* Minska storleken på rubriker */
     }
 
     .projects {
