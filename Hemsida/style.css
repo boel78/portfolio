@@ -635,6 +635,7 @@ form input,textarea{
     }
     .about-me{
         padding-inline: 0;
+        gap: 2rem;
     }
     .technologies{
         width: 80vw;
