@@ -315,8 +315,11 @@ button:hover{
     padding: 1rem;
 }
 .tech-stack img{
-    width: clamp(30px, 3vw, 3rem); /* Minst 30px, max 80px, och skalar med viewport */
-    height: clamp(30px, 3vw, 3rem);
+    width: clamp(30px, 3vw, 2.6rem); /* Minst 30px, max 80px, och skalar med viewport */
+    height: clamp(30px, 3vw, 2.6rem);
+    background-color: white;
+    border-radius: 20%;
+    box-shadow: 1px 1px 4px black;
 }
 .links{
     display: flex;
@@ -334,7 +337,7 @@ button:hover{
     margin-bottom: 4rem;
 }
 .technology{
-    color: #120909;
+    color: var(--text-color);
     z-index: 0;
     display: flex;
     align-items: center;
@@ -395,6 +398,8 @@ form{
     gap: 2rem;
 }
 form input,textarea{
+    color: white;
+    text-decoration: none;
     width: 20rem;
     padding: 1rem;
     border: 1px solid black;
