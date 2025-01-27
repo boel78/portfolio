@@ -632,6 +632,7 @@ form input,textarea{
     }
     .second-section{
         padding-inline: 1rem;
+        gap: 10rem;
     }
 
     .technology-container{
@@ -659,6 +660,9 @@ form input,textarea{
         gap: 3rem; 
         padding-inline: 1rem;
     }
+    .project-section h2{
+        margin-block: 3rem;
+    }
 
     .project {
         width: 100%; /* Full bredd på projekten */
@@ -671,7 +675,7 @@ form input,textarea{
     .header img {
         width: 15rem; /* Justera header-bildens storlek */
     }
-    #text-highlight{
+    #text-highlight, #projectText{
         font-size: 1.5rem;
     }
     button{
@@ -681,6 +685,7 @@ form input,textarea{
     }
     form{
         padding: 0;
+        gap:1rem;
     }
     form input,textarea{
         width: 8rem;
@@ -701,13 +706,13 @@ form input,textarea{
         font-size: 2rem;
     }
     #text-highlight{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .contactForm #text-highlight{
         font-size: 0.7rem;
     }
     .technologies-list li{
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     .technologies-list li span::after{
