@@ -75,7 +75,7 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![HTML][(https://cdn.svgporn.com/logos/html-5.svg)]]
+* [![HTML]](https://cdn.svgporn.com/logos/html-5.svg)
 * [![React][React.js]]
 * [![Vue][Vue.js]]´
 
