@@ -14,14 +14,13 @@ body{
     padding-inline: 8rem;
     font-size: large;
     --background-color: #fffff7;
-    --section-color: #ececec;
+    --section-color: #fffae3;
     --accent-color: #ff7834;
     --c2: #69d2e7;
     --shadow-color: rgb(167, 167, 167);
     --nav-border: rgb(186, 186, 186);
-    --card-color: rgb(246, 246, 246);
-    --text-color: #120909;
-    --text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
+    --card-color: rgb(222, 215, 187);
+    --text-color: #000000;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
 }
@@ -105,17 +104,7 @@ a{
     align-items: center;
     justify-content: center;
     gap:2rem;
-        --s: 52px; 
-        --c1: #e0e4cc;
-        
-        --_g: 90deg,#0000 0; 
-        background:
-          conic-gradient(from 135deg,var(--c1) var(--_g)) var(--s) calc(var(--s)/2),
-          conic-gradient(from 135deg,var(--c2) var(--_g)),
-          conic-gradient(from 135deg at 50% 0,var(--c1) var(--_g)) var(--c2); 
-        background-size: calc(2*var(--s)) var(--s);
-        background-attachment: fixed;
-        transition: --c2 1s ease-in-out;
+    background-color: var(--section-color);
     width: 100vw; 
     height: 100vh;
 }
@@ -127,15 +116,14 @@ a{
     height: 100vh;
 }
 .header-text{
-    text-shadow: var(--text-shadow);
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     align-self: center;
-    gap: 2rem;
+    gap: 3rem;
     width: 50%;
-    padding-top: 5rem;
+    padding-top: 8rem;
     position: relative;
 }
 .header-text h1{
@@ -253,6 +241,11 @@ button:hover{
     align-items: center;
     width: 100%;
     align-self: start;
+}
+#link_text{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-decoration: underline;
 }
 .link-container{
     width: 100%;

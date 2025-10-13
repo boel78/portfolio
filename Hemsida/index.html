@@ -21,7 +21,6 @@
     <section class="header" id="home">
         <div class="header-container">
             <div class="header-text">
-                <p>Hej, jag heter</p>
                 <h1>Noel Fockstedt</h1>
                 <p>Jag är en passionerad programmerare med ett öga för detaljer och en drivkraft att lösa problem. Med erfarenhet inom både frontend och backend älskar jag att skapa effektiva, användarvänliga lösningar som gör skillnad.</p>
                 <button onclick="location.href='CV.pdf'">CV</button>
@@ -118,11 +117,11 @@
     
             <div class="project">
                 <h3>Elevate Elegance</h3>
-                <p>Jag bad GPT att hitta på ett låtsas företag åt mig som behövde en hemsida för deras webbshopp. Så jag byggde en databas i Java spring och kopplade den med MongoDB. Frontenden är byggd i React och produkterna är skapade med hjälp av AI.(Använder Render för att hosta API, det kan ta ett tag för den att komma igång.)</p>
+                <p>En fiktiv webbshop byggd i Java spring och kopplad med MongoDB. Frontenden är byggd i React.</p>
                 <div class="link-container">
                     <div class="links">
                         <a href="https://github.com/boel78/elevate-elegance"><img src="svgs/github-icon.svg"></a>
-                        <a href="https://elevate-elegance-frontend.onrender.com/">Website link</a>
+                        <a href="https://elevate-elegance-frontend.onrender.com/" id="link_text">Website link</a>
                     </div>
                     <div class="tech-stack">
                         <img src="svgs/react.svg" alt="ReactJS">
@@ -133,29 +132,12 @@
                 </div>
             </div>
             <div class="project">
-                <h3>ChatMore</h3>
-                <p>ChatMore är en chat-applikation som fortfarande är WIP. Jag har skapat med NextJS. Backenden är skapad med .net och databasen ligger uppe på Azure. Min plan med detta projekt är att bygga vidare på det och skapa en Instagram-klon med posts som man kan interagera med.</p>
-                <div class="link-container">
-                    <div class="links">
-                        <a href="https://github.com/boel78/ChatMore"><img src="svgs/github-icon.svg"></a>
-                        <a>Website link</a>
-                    </div>
-                    <div class="tech-stack">
-                        <img src="svgs/nextjs-icon.svg" alt="NextJS">
-                        <img src="svgs/dotnet.svg" alt="Dotnet">
-                        <img src="svgs/mysql-icon.svg" alt="MySQL">
-                        <img src="svgs/microsoft-azure.svg" alt="Azure">
-                        <img src="svgs/tailwindcss-icon.svg" alt="Tailwind">
-                    </div>
-                </div>
-            </div>
-            <div class="project">
                 <h3>PomodoroApp</h3>
-                <p>En applikation som gör det lättare att plugga med hjälp av Pomodorotekniken. Denna app tar inspiration från Duolingo med funktionalitet som Streaks och Achievements för att motivera studerande. Projektet är byggt med NextJS och .Net. Databasen ligger uppe på Azure.</p>
+                <p>Ett pluggverktyg. Projektet är byggt med NextJS och .Net. Databasen ligger uppe på Azure.</p>
                <div class="link-container">
                     <div class="links">
                         <a href="https://github.com/boel78/PomodoroWebb"><img src="svgs/github-icon.svg"></a>
-                        <a href="https://pomodoro-webb.vercel.app/">Website link</a>
+                        <a href="https://pomodoro-webb.vercel.app/" id="link_text">Website link</a>
                     </div>
                     <div class="tech-stack">
                         <img src="svgs/nextjs-icon.svg" alt="NextJS">
@@ -219,7 +201,7 @@
         <h2>Kontakt</h2>
         <form action="https://formspree.io/f/xyyrkgad" method="post">
                 <h3 id="text-highlight">Kontakta mig</h3>
-                <p>Om du vill veta mer blablablabla</p>
+                <p>Vill du veta mer? Kontakta mig gärna via formuläret eller på min mail!</p>
             <input type="text" placeholder="Namn" name="name" required>
             <input type="email" placeholder="Email" name="email" required>
             <textarea placeholder="Meddelande" name="message" required></textarea>
@@ -228,8 +210,6 @@
         <div class="contact-information">
             <h4>Email</h4>
             <p id="text-highlight">noel.fockstedt@live.se</p>
-            <h4>Telefon</h4>
-            <p id="text-highlight">+1(970)814-4630</p>
         </div>
     </section>
     <script src="script.js"></script>
